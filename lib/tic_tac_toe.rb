@@ -27,7 +27,7 @@ def move(board, position, token)
 end
 
 def position_taken?(board, position)
-  board[position] != " "
+  !(board[position] == " " || board[position].nil?)
 end
 
 def valid_move?(board, position)
@@ -59,3 +59,17 @@ end
 def current_player(board)
   turn_count(board) % 2 == 0 ? "X" : "O"
 end
+
+def won?(board)
+  WIN_COMBINATIONS.select do |win_com|
+    if (board[win_com[0]] == "X" && board[wincom[1]] == "X" && board[win_com[2]] == "X")
+      return win_com
+    elsif (board[win_com[0]] == "O" && board[wincom[1]] == "O" && board[win_com[2]] == "O")
+      return win_com
+    elsif board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+      return nil
+    end
+  end
+  false
+end
+      
