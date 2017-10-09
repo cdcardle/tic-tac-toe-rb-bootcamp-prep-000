@@ -34,5 +34,20 @@ def valid_move?(board, position)
   !position_taken?(board, position)
 end
 
-def turn(board)
-  
+def turn()
+  puts "Please enter a number 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, position, token="X")
+  end
+end
+
+def turn_count(board)
+  count = (board.select{|i| i !== " "}).length
+  return count
+end
+
+def current_player(board)
+  turn_count(board) % 2 == 0 ? "X" : "O"
+end
