@@ -31,7 +31,10 @@ def position_taken?(board, position)
 end
 
 def valid_move?(board, position)
-  !position_taken?(board, position)
+  if (position < 0 || position > 8)
+    false
+  elsif position_taken?(board, position)
+    false
 end
 
 def turn()
