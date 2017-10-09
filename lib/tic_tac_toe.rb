@@ -25,3 +25,14 @@ end
 def move(board, position, token)
   board[position] = token
 end
+
+def position_taken?(board, position)
+  board[position] !== " "
+end
+
+def valid_move?(board, position)
+  !position_taken?(board, position)
+end
+
+def turn(board)
+  
