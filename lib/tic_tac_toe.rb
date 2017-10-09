@@ -25,4 +25,3 @@ end
 def move(board, position, token="X")
   board[position] = token
 end
-
