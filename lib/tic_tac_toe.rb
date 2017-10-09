@@ -76,5 +76,3 @@ end
 def full?(board)
   board.all?{|i| (i == "O" || i == "X")}
 end
-
-
