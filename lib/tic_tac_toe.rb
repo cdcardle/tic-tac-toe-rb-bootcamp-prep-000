@@ -35,6 +35,7 @@ def valid_move?(board, position)
     false
   elsif position_taken?(board, position)
     false
+  else true
   end
 end
 
