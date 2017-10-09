@@ -100,10 +100,10 @@ def play(board)
     turn(board)
   end
   if won?(board)
-    puts "Congrulations, #{winner} has won!"
+    puts "Congrulations, #{winner}!"
     over?(board)
   elsif draw?(board)
-    "Game has ended in a draw!"
+    "Cat's Game!"
     over?(board)
   end
 end
