@@ -44,7 +44,7 @@ def turn()
 end
 
 def turn_count(board)
-  count = (board.select{|i| i != " "}).length
+  count = (board.select{|i| (i == "X" || i == "O")}).length
   return count
 end
 
