@@ -66,7 +66,7 @@ def won?(board)
       return win_com
     elsif (board[win_com[0]] == "O" && board[win_com[1]] == "O" && board[win_com[2]] == "O")
       return win_com
-    elsif board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    elsif (board = [" ", " ", " ", " ", " ", " ", " ", " ", " "])
       return nil
     end
   end
