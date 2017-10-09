@@ -42,7 +42,7 @@ def turn()
     move(board, position, token="X")
     display_board(board)
   else
-    turn(board0
+    turn(board)
   end
 end
 
